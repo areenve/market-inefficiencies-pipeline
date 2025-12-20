@@ -1,0 +1,27 @@
+# notebooks
+.ipynb_checkpoints/
+
+# data & outputs
+data/
+results/
+*.parquet
+*.csv
+*.zip
+*.sqlite
+*.db
+*.log
+*.out
+
+# python
+__pycache__/
+*.pyc
+
+# R junk
+.Rhistory
+.RData
+.Rapp.history
+.Rproj.user/
+
+# mac
+.DS_Store
+
