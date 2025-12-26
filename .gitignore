@@ -36,3 +36,5 @@ data/raw/
 
 # Jupyter/Editor artifacts
 .virtual_documents/
+
+.ipynb_checkpoints/
