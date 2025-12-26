@@ -1,0 +1,10 @@
+db_path: data/raw/dislocations.sqlite3
+latency_ms: 300
+
+costs_bps:
+  fee_bps: 2
+  half_spread_bps: 1
+  slippage_bps: 3
+
+persistence_ms: 600
+

@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/market_inefficiencies/__init__.py
+src/market_inefficiencies/config.py
+src/market_inefficiencies.egg-info/PKG-INFO
+src/market_inefficiencies.egg-info/SOURCES.txt
+src/market_inefficiencies.egg-info/dependency_links.txt
+src/market_inefficiencies.egg-info/top_level.txt
