@@ -77,16 +77,16 @@ python scripts/backtest.py --lookback-min 180
 
 python scripts/make_plots.py --lookback-min 180
 
-### Notes
+## Notes
 Raw SQLite DB is ignored by git (data/raw/).
 data/processed/ CSV summaries and outputs/figures/ PNGs are small and safe to commit.
 During low-activity windows you may see fewer detected events.
 
-### 5) Save, then commit + push
+### Save, then commit + push
 git add README.md
 git commit -m "Improve README with pipeline usage and outputs"
 git push
 
-### 6) Author
+### Author
 **Arina Veprikova** — BSc Data Science (Finance minor), SFU
 **Interests:** quant research, market microstructure, data pipelines, evaluation workflows
