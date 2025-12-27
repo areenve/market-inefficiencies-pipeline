@@ -35,69 +35,58 @@ This repo is a cleaned-up, script-first version of my earlier notebook/Colab wor
 ## Quickstart (local)
 
 ### 1) Setup environment
-From repo root:
-
-```bash
+**From repo root:**
 python -m pip install -r requirements.txt
 
-2) Configure
+### 2) Configure
 
-Edit `config.yaml` to control:
+**Edit `config.yaml` to control:**
 - `db_path`: SQLite location (default: `data/raw/dislocations.sqlite3`)
 - `costs_bps`: trading frictions (`fee_bps`, `half_spread_bps`, `slippage_bps`)
 - `latency_ms`: execution delay assumption
 - `persistence_ms`: event persistence filter
 
-3) Run the pipeline
+### 3) Run the pipeline
 
-A) Collect ticks (writes to SQLite)
-```bash
+**A) Collect ticks (writes to SQLite)**
 python scripts/collect_ticks.py --minutes 60
-B) Detect events (writes metrics + events CSV)
 
-bash
-Copy code
+**B) Detect events (writes metrics + events CSV)**
 python scripts/detect_events.py --lookback-min 720 --threshold-bps 6 --persistence-ms 600
-C) Backtest (writes trades CSV + prints summary)
 
-bash
-Copy code
+**C) Backtest (writes trades CSV + prints summary)**
 python scripts/backtest.py --lookback-min 720
-D) Make plots for poster / README (writes PNGs)
 
-bash
-Copy code
+**D) Make plots for poster / README (writes PNGs)**
 python scripts/make_plots.py --lookback-min 720
-Interpreting results
 
-pnl_bps: gross event payoff (basis points), before costs
+### Interpreting results
+**pnl_bps:** gross event payoff (basis points), before costs
 
-pnl_net_bps: payoff after estimated frictions
+**pnl_net_bps:** payoff after estimated frictions
 (fees + spread crossing + slippage, plus latency assumptions)
 
 Note: Many small dislocations disappear after realistic frictions — that’s the point of the pipeline.
 
-Reproducible demo run (copy/paste)
-
-bash
-Copy code
+### 4) Reproducible demo run (copy/paste)
 python scripts/collect_ticks.py --minutes 60
+
 python scripts/detect_events.py --lookback-min 180 --threshold-bps 6 --persistence-ms 600
+
 python scripts/backtest.py --lookback-min 180
+
 python scripts/make_plots.py --lookback-min 180
-Notes
 
+### Notes
 Raw SQLite DB is ignored by git (data/raw/).
-
 data/processed/ CSV summaries and outputs/figures/ PNGs are small and safe to commit.
-
 During low-activity windows you may see fewer detected events.
 
-sql
-Copy code
-
-## 4) Save, then commit + push
-```bash
+### 5) Save, then commit + push
 git add README.md
 git commit -m "Improve README with pipeline usage and outputs"
 git push
+
+### 6) Author
+**Arina Veprikova** — BSc Data Science (Finance minor), SFU
+**Interests:** quant research, market microstructure, data pipelines, evaluation workflows
