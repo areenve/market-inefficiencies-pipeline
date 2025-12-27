@@ -1,6 +1,6 @@
 # Market Inefficiencies Pipeline (Cross-Venue Price Dislocations)
 
-A small, employer-friendly Python pipeline that collects cross-venue mid-prices (ticks), detects short-lived price dislocations between venues, and runs a simple friction-aware backtest.
+Python pipeline that collects cross-venue mid-prices (ticks), detects short-lived price dislocations between venues, and runs a simple friction-aware backtest.
 
 This repo is a cleaned-up, script-first version of my earlier notebook/Colab workflow.
 
