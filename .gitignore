@@ -38,3 +38,19 @@ data/raw/
 .virtual_documents/
 
 .ipynb_checkpoints/
+# generated outputs
+outputs/
+data/
+*.sqlite
+*.sqlite3
+*.db
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# mac
+.DS_Store
+
